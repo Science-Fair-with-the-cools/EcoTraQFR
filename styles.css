@@ -22,10 +22,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
 h3 {
-  color: var(--textcol);
+  color: var(--formtextcol);
 }
 
 #header {
