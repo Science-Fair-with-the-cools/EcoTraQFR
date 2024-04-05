@@ -36,7 +36,7 @@ const emissions = {
     },
     housing: {
       "town": 6.08,
-      "single": 39.55,
+       "single": 13.1833333333,
       "apartment": 10.33,
       "mobile": 1.14,
       //q
@@ -154,12 +154,12 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         
         if (btnNum == 2){
 
-            if(calculateSectionEmissions("housing") >= 43){
+            if(calculateSectionEmissions("housing") >= 17){
                 summaryText.innerHTML = `<h3 id="sect-h">Logement:</h3>
                 <p id="sect-p">Votre logement semble présenter des taux élevés d'émissions de carbone par an. Afin de réduire vos émissions, essayez de passer au gaz naturel pour chauffer votre maison. Essayez également d'utiliser moins d'appareils tels que les lave-vaisselle, les lave-linge et les sèche-linge pour le nettoyage. N'oubliez pas d'éteindre votre chauffage lorsque vous quittez la maison pour voyager et, lorsque vous achetez de nouveaux appareils électroménagers, optez pour des appareils respectueux de l'environnement ou plus efficaces.
 </p>`;
             }
-            else if (calculateSectionEmissions("housing") < 43){
+            else if (calculateSectionEmissions("housing") < 17){
                 summaryText.innerHTML = `<h3 id="sect-h">Logement:</h3>
                 <p id="sect-p">Votre situation de logement semble présenter des taux de rejet de carbone assez faibles. Veillez à conserver l'énergie en utilisant moins d'appareils et des sources de chauffage plus écologiques. Lors de l'achat de nouveaux appareils, privilégiez les appareils respectueux de l'environnement ou plus efficaces. =)
 </p>`;
