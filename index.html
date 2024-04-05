@@ -5,22 +5,22 @@
   <link rel="stylesheet" href="styles.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title">EcoTraQ (Carbon footprint calculator)</title>
+  <title id="title">EcoTraQ (Calculatrice d'Impact du Carbone)</title>
   <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/2/free-tree-icon-1578-thumb.png">
 </head>
 
 <body>
   <!-- language buttons -->
-  <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
-  <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
+  <button id="langbutton-en"><a href="https://science-fair-with-the-cools.github.io/EcoTraQ/">Anglais</button></a>
+  <button id="langbutton-fr">Français</button>
 
   <main>
     <h1>EcoTraQ</h1>
-    <h3 id="subtitle">A Carbon Footprint Calculator</h3>
+    <h3 id="subtitle">Calculatrice d'Impact du Carbone</h3>
     <!-- Header to access different parts of the site -->
     <div id="header">
       <div class="sites">
-         <a href="https://science-fair-with-the-cools.github.io/Homepage/">Main Page</a>
+         <a href="https://science-fair-with-the-cools.github.io/Homepage/">Page d'Origine</a>
           
       </div>
 
@@ -32,153 +32,149 @@
     </div>
     <!-- Brief desc of project -->
     <div id="projectdesc">
-      <h2>Our Mission:</h2>
+      <h2>Notre Mission:</h2>
 
-      <p>People live their everyday lives oblivious that every decision they make alters their impact on our
-        environment. EcoTraQ is a carbon footprint calculator that helps people understand and reduce their
-        environmental impact, it is a tool for tracking personal emissions and website carbon footprints. Users input
-        their lifestyle choices or website links to see how much carbon they release. By comparing user’s results with
-        the average emissions released per capita, we can better understand how to live a more efficient lifestyle. Our
-        project aims to raise awareness for individuals to take action towards a more sustainable future.</p>
+      <p>Les gens vivent leur vie quotidienne sans se rendre compte que chaque décision qu'ils prennent modifie leur impact sur l'environnement. EcoTraQ est un calculateur d'empreinte carbone qui aide les gens à comprendre et à réduire leur impact sur l'environnement. C'est un outil qui permet de suivre les émissions personnelles et l'empreinte carbone des sites web. Les utilisateurs saisissent leurs choix de mode de vie ou les liens de leur site web pour connaître la quantité de carbone qu'ils émettent. En comparant les résultats des utilisateurs avec les émissions moyennes par habitant, nous pouvons mieux comprendre comment adopter un mode de vie plus efficace. Notre projet vise à sensibiliser les individus à agir en faveur d'un avenir plus durable.</p>
     </div>
 
     <!-- Questionnaire section -->
     <div id="form">
-      <h2 id="questionnaire">Questionnaire:</h2>
+      <h2 id="questionnaire">Quiz:</h2>
       <div id="questions">
         <form id="carbonForm">
 
           <div class="question"><strong>Estimation</strong>
             <!-- Id is called pre-form -->
-            <p id="pre-form"><strong>Before starting the questionnaire, estimate what you think your carbon footprint is. (**In tonnes**)</strong></p>
+            <p id="pre-form"><strong>Avant de commencer le questionnaire, évaluez votre empreinte carbone. (**en tonnes**)</strong></p>
             <input id="numInput" type="number" min="1" required>
           </div>
           
-          <div class="question"><strong>Transportation</strong>
-            <p id="transportation"><strong>1.</strong> How do you typically commute to school or work?</p>
+          <div class="question"><strong>Transport</strong>
+            <p id="transportation"><strong>1.</strong>Comment vous rendez-vous habituellement à l'école ou au travail ?</p>
             <select id="select-element1" name="transportation" required>
-              <option value="">(select one)</option>
-              <option value="Car">Car</option>
-              <option value="EV">Electric Vehicle</option>
-              <option value="Public_Bus">Public Bus/Rail/Subway</option>
-              <option value="Bike">Bike</option>
-              <option value="Walking">Walking</option>
+              <option value="">(choisir un)</option>
+              <option value="Car">Automobile</option>
+              <option value="EV">Véhicule électrique</option>
+              <option value="Public_Bus">Bus/rail/métro public</option>
+              <option value="Bike">Bicyclette</option>
+              <option value="Walking">Au pieds</option>
             </select>
           </div>
 
 
           <div class="question">
-            <p id="flights"><strong>2.</strong> How often do you take flights for leisure or business?</p>
+            <p id="flights"><strong>2.</strong>À quelle fréquence prenez-vous l'avion pour vos loisirs ou vos affaires ?</p>
             <select id="select-element2" name="flights" required>
-              <option value="">(select one)</option>
-              <option value="multiple_times">Multiple times a year</option>
-              <option value="once">Once a year</option>
-              <option value="rarely">Rarely or never</option>
+              <option value="">(choisir un)</option>
+              <option value="multiple_times">Plusieurs fois par an</option>
+              <option value="once">Un fois par an</option>
+              <option value="rarely">Rarement ou jamais</option>
             </select>
           </div>
 
-          <div class="question"><br><strong id="home">Housing</strong>
-            <p id="housing"><strong>3.</strong> What type of housing do you reside in?</p>
+          <div class="question"><br><strong id="home">Logement</strong>
+            <p id="housing"><strong>3.</strong>Dans quel type de logement résidez-vous ?</p>
             <select id="select-element3" name="housing" required>
-              <option value="">(select one)</option>
-              <option value="town">Town house</option>
-              <option value="single">Single home</option>
-              <option value="apartment">Apartment</option>
-              <option value="mobile">Mobile home</option>
+              <option value="">(choisir un)</option>
+              <option value="town">Maison de ville</option>
+              <option value="single">Maison seule</option>
+              <option value="apartment">Apartement ou condo</option>
+              <option value="mobile">Maison mobile</option>
             </select>
           </div>
 
           <div class="question">
-            <p id="heating"><strong>4.</strong> How do you heat your home?</p>
+            <p id="heating"><strong>4.</strong>Comment chauffez-vous votre maison ?</p>
             <select id="select-element4" name="heating" required>
-              <option value="">(select one)</option>
-              <option value="Gas">Natural Gas</option>
-              <option value="Elec">Electricity</option>
+              <option value="">(choisir un)</option>
+              <option value="Gas">Gaz naturels</option>
+              <option value="Elec">L'électricité</option>
              
             </select>
           </div>
           
           <div class="question">
-            <p id="appliances"><strong>5.</strong> Do you use any of the following? Dryer, washer, dishwasher, or refrigerator</p>
+            <p id="appliances"><strong>5.</strong> Utilisez-vous l'un des éléments suivants ? Sèche-linge, lave-linge, lave-vaisselle ou réfrigérateur</p>
             <select id="select-element5" name="appliances" required>
-              <option value="">(select one)</option>
+              <option value="">(choisir un)</option>
+              <option value="None">Rien</option>
               <option value="One">1</option>
               <option value="Two">2</option>
               <option value="Three">3</option>
-              <option value="All">All</option>
+              <option value="All">Tout</option>
             </select>
           </div>
 
           
 
-          <div class="question"><br><strong id="food">Diet</strong>
-            <p id="diet"><strong>6.</strong> What best describes your diet?</p>
+          <div class="question"><br><strong id="food">Régime alimentaire</strong>
+            <p id="diet"><strong>6.</strong>Qu'est-ce qui décrit le mieux votre régime alimentaire ?</p>
             <select id="select-element6" name="diet" required>
-              <option value="">(select one)</option>
-              <option value="vegan">Vegan</option>
-              <option value="vegetarian">Vegetarian</option>
-              <option value="omnivore">Omnivore (meet and vegetables)</option>
-              <option value="carnivore">Mostly Carnivorous (mainly meet)</option>
-              <option value="nobeef">No beef, omnivorous diet</option>
+              <option value="">(choisir un)</option>
+              <option value="vegan">Végétalien</option>
+              <option value="vegetarian">Végétarien</option>
+              <option value="omnivore">Omnivore (viande et légumes)</option>
+              <option value="carnivore">Principalement carnivore (principalement la viande)</option>
+              <option value="nobeef">Pas de bœuf, régime omnivore</option>
             </select>
           </div>
 
           <div class="question">
-            <p id="meat_consumption"><strong>7.</strong> (optional) How often do you consume meat or dairy products?</p>
+            <p id="meat_consumption"><strong>7.</strong>(facultatif) À quelle fréquence consommez-vous de la viande ou des produits laitiers ?</p>
             <select id="select-element7" name="meat_consumption">
               <option value="">N/A</option>
-              <option value="several_times">Several times a week</option>
-              <option value="few_times">A few times a week</option>
-              <option value="rarely_never">Rarely or never</option>
+              <option value="several_times">Plusiers fois par semaine</option>
+              <option value="few_times">Quelques fois par semaine</option>
+              <option value="rarely_never">Rarement ou jamais</option>
             </select>
           </div>
 
-          <div class="question"><br><strong id="Habits">Habits</strong>
-            <p id="Habits"><strong>8.</strong> How long do you shower (no bath)</p>
+          <div class="question"><br><strong id="Habits">Les habitudes</strong>
+            <p id="Habits"><strong>8.</strong> Combien de temps prenez-vous une douche (pas de bain) ?</p>
             <select id="select-element8" name="Habits" required>
-              <option value="">(select one)</option>
-              <option value="always0">1 hour or less</option>
-              <option value="sometimes0">30 mins or less</option>
-              <option value="rarely0">10 mins or less</option>
+              <option value="">(choisir un)</option>
+              <option value="always0">1 heure ou moins</option>
+              <option value="sometimes0">30 minutes ou moins</option>
+              <option value="rarely0">10 minutes ou moins</option>
             </select>
           </div>
 
           <div class="question">
-            <p id="recycling_practice"><strong>9.</strong> Do you recycle or compost?</p>
+            <p id="recycling_practice"><strong>9.</strong>Recyclez-vous ou compostez-vous ?</p>
             <select id="select-element9" name="recycling_practice" required>
-              <option value="">(select one)</option>
-              <option value="always2">Both</option>
-              <option value="sometimes2">Recycle only</option>
-              <option value="rarely2">Compost only</option>
-              <option value="idk_dude">None</option>
+              <option value="">(choisir un)</option>
+              <option value="always2">Les deux</option>
+              <option value="sometimes2">Recyclage uniquement</option>
+              <option value="rarely2">Compost uniquement</option>
+              <option value="idk_dude">Rien</option>
             </select>
           </div>
 
           <div class="question">
-            <p id="electricity_usage_hours"><strong>10.</strong> How many hours a day are your lights on? (estimate)</p>
+            <p id="electricity_usage_hours"><strong>10.</strong>Combien d'heures par jour vos lumières sont-elles allumées ? (estimation)</p>
             <select id="select-element10" name="electricity_usage_hours" required>
-              <option value="">(select one)</option>
-              <option value="always3">20 hours or more</option>
-              <option value="sometimes3">12 hours or more</option>
-              <option value="rarely3">6 hours or more</option>
-              <option value="idk4">less than 6 hours</option>
+              <option value="">(choisir un)</option>
+              <option value="always3">20 heurs ou plus</option>
+              <option value="sometimes3">plus que 12 heurs</option>
+              <option value="rarely3">plus que 6 heurs</option>
+              <option value="idk4">moin que 6 hours</option>
             </select>
           </div>
 
       </div>
       <br>
-      <input id="goof" type="submit">
+      <input id="goof" type="submit" value="Envoyer">
       <div id="result"></div>
       </form>
     </div>
     </div>
 
-    <h2>Summary</h2>
+    <h2>Résumé</h2>
 
     <div id="cool-box">
         <div id="box">
             <h3 id="sect-h"></h3>
-<p id="sect-p">When you complete the form your summary will be displayed here.</p>
+<p id="sect-p">Lorsque vous aurez rempli le formulaire, votre résumé sera affiché ici.</p>
         </div>
         <div id="nav-btns">
             
@@ -188,16 +184,14 @@
     <!-- Footer -->
     <!-- Footer -->
     <footer>
-      <h2 id="about">About:</h2>
-      <p id="credits">Designed completely in HTML, CSS, and JS. All results are to be taken as near estimates based on Canadian/Ontario,
-        average, and national/provincial data. </p>
-      <p id="credits1">Created by: Cameron Lemoine and Hasan Ahmed</p>
-      <p id="credits2"> With help from: Will Reavie and Aaron Chung</p>
+      <h2 id="about">Crédits:</h2>
+      <p id="credits">Conçu entièrement en HTML, CSS et JS. Tous les résultats doivent être considérés comme des estimations approximatives basées sur les données canadiennes/ontariennes, moyennes et nationales/provinciales.</p>
+      <p id="credits1">Créé par: Cameron Lemoine et Hasan Ahmed</p>
+      <p id="credits2">Avec l'aide de: Will Reavie et Aaron Chung</p>
       <p>
-        <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id="github" target="_blank">GitHub Repository</a>
+        <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id="github" target="_blank">Page de GitHub</a>
       <div>
-        <a href="https://projectboard.world/ysc/project/ecotraq-carbon-footprint-calculator" id="pbpage" target="_blank">ProjectBoard
-          Page</a>
+        <a href="https://projectboard.world/ysc/project/ecotraq-carbon-footprint-calculator" id="pbpage" target="_blank">Page de ProjectBoard</a>
         <div>
           <br>
           <a href="https://www.dropbox.com/scl/fi/nu5uc4ykhm51pbvhqn26s/Sources-for-Ottawa-Regional-Science-Fair-EcoTraQ.pdf?rlkey=g6tgpyron6yiebu480syyd8or&dl=0" target="_blank">Sources</a>
@@ -205,7 +199,7 @@
       </div>
       </p>
       <div class="buttons">
-        <button id="topbtn" onclick="backToTop()">Back to top</button>
+        <button id="topbtn" onclick="backToTop()">En haut</button>
       </div>
     </footer>
   </main>
