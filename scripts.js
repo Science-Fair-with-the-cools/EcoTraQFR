@@ -120,7 +120,7 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
         // Display result
         let resultElement = document.getElementById("result");
-        resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value.toString()} tons. \nTake a look at how they compare!`;
+        resultElement.innerText = `Votre empreinte carbone totale est estimée à ${totalEmissions} tonnes of de C02 par an. \nVotre empreinte carbone était estimée à ${numInput.value.toString()} tonnes. \nJetez un coup d'œil à leur comparaison !`;
 
           // Create buttons
           summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
@@ -138,11 +138,12 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
             if(calculateSectionEmissions("transportation") >= 2){
                 summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
-                <p id="sect-p">In this section of the form, your answers presented high levels of carbon emissions. To reduce carbon emissions with transportation, try walking, or biking for short distances and using an electric vehicle or public transportation for far distance travels. Also try traveling less by plane for vacations and try other methods such as cruises or roadtrips.</p>`;
+                <p id="sect-p">Dans cette section du formulaire, vos réponses présentent des niveaux élevés d'émissions de carbone. Pour réduire les émissions de carbone dans les transports, essayez de marcher ou de faire du vélo pour les courtes distances et d'utiliser un véhicule électrique ou les transports publics pour les trajets plus longs. Essayez également de voyager moins en avion pour les vacances et essayez d'autres méthodes telles que les croisières ou les roadtrips.
+                </p>`;
             }
             else if(calculateSectionEmissions("transportation") < 2){
                 summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
-                <p id="sect-p">In this section of the form, your answers present optimal levels carbon emissions with your transportation habbits. Keep using more renewable transport methods such as: public transportation, electric vehicles, walking and biking. =)</p>`;
+                <p id="sect-p">Dans cette section du formulaire, vos réponses présentent les niveaux optimaux d'émissions de carbone liés à vos habitudes de transport. Continuez à utiliser des méthodes de transport plus renouvelables telles que : les transports publics, les véhicules électriques, la marche et le vélo. =)</p>`;
             }
 
             document.getElementById("btn1").style.backgroundColor = '#57CC99';
@@ -154,13 +155,13 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         if (btnNum == 2){
 
             if(calculateSectionEmissions("housing") >= 43){
-                summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
-                <p id="sect-p">Your housing situation seems to present high rates of carbon release per year. In order to help reduce your emissions, try switching to natural gas for heating your home. Also try relying less on appliances such as: dishwashers, washing machines and dryers for cleaning things. Remember to turn off your heating when you are leaving the house for travel and when buying new appliances look into eco-friendly or more efficient appliances.
+                summaryText.innerHTML = `<h3 id="sect-h">Logement:</h3>
+                <p id="sect-p">Votre logement semble présenter des taux élevés d'émissions de carbone par an. Afin de réduire vos émissions, essayez de passer au gaz naturel pour chauffer votre maison. Essayez également d'utiliser moins d'appareils tels que les lave-vaisselle, les lave-linge et les sèche-linge pour le nettoyage. N'oubliez pas d'éteindre votre chauffage lorsque vous quittez la maison pour voyager et, lorsque vous achetez de nouveaux appareils électroménagers, optez pour des appareils respectueux de l'environnement ou plus efficaces.
 </p>`;
             }
             else if (calculateSectionEmissions("housing") < 43){
-                summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
-                <p id="sect-p">Your housing situation seems to present fairly low rates of carbon release. Make sure to keep conserving energy by using less appliances and using more eco friendly heating sources. When buying new appliances look into eco-friendly or more efficient appliances. =)
+                summaryText.innerHTML = `<h3 id="sect-h">Logement:</h3>
+                <p id="sect-p">Votre situation de logement semble présenter des taux de rejet de carbone assez faibles. Veillez à conserver l'énergie en utilisant moins d'appareils et des sources de chauffage plus écologiques. Lors de l'achat de nouveaux appareils, privilégiez les appareils respectueux de l'environnement ou plus efficaces. =)
 </p>`;
             }
 
@@ -173,13 +174,13 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         if(btnNum == 3) {
 
             if(calculateSectionEmissions("diet") >= 3.7){
-                summaryText.innerHTML = `<h3 id="sect-h">Diet:</h3>
-                <p id="sect-p">According to your input, your eating habits produce increased output of carbon discharge. Some methods to reduce your carbon footprint from diet are: eating less meat/animal products (mainly beef) and consuming more plants (fruits and vegetables) from local areas. Sources say that having even only 1 vegan or vegetarian day a week can save 100-150 kg of CO2 per year!
+                summaryText.innerHTML = `<h3 id="sect-h"> Régime alimentaire:</h3>
+                <p id="sect-p">En fonction de votre apport, vos habitudes alimentaires produisent une augmentation de la décharge de carbone. Voici quelques méthodes pour réduire l'empreinte carbone de votre alimentation : manger moins de viande/produits d'origine animale (principalement du bœuf) et consommer davantage de végétaux (fruits et légumes) provenant de régions locales. Certaines sources affirment qu'une seule journée végétalienne ou végétarienne par semaine permet d'économiser 100 à 150 kg de CO2 par an !
 </p>`;
             }
             else if(calculateSectionEmissions("diet") < 3.7){
-                summaryText.innerHTML = `<h3 id="sect-h">Diet:</h3>
-                <p id="sect-p">According to your input, your eating habits showed efficient outputs of carbon discharge. Continue reducing your consumption of animal products and keep eating more local fruits and vegetables. =)
+                summaryText.innerHTML = `<h3 id="sect-h"> Régime alimentaire:</h3>
+                <p id="sect-p">En fonction de vos données, vos habitudes alimentaires se sont traduites par des rejets efficaces de carbone. Continuez à réduire votre consommation de produits animaux et à manger davantage de fruits et légumes locaux. =)
 </p>`;
             }
 
@@ -192,13 +193,13 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         else if(btnNum == 4){
 
             if(calculateSectionEmissions("habits") >= 2.5){
-            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
-            <p id="sect-p">Your everyday habits demonstrate sub-optima levels of carbon production in your day to day life. To help reduce carbon production caused within your everyday habits make sure to save water by taking shorter showers and closing sink while brushing your teeth. Also ensure to recycle and compost as much as possible and conserve your light bulbs (close lights when not in use).
+            summaryText.innerHTML = `<h3 id="sect-h"> Les habitudes:</h3>
+            <p id="sect-p">Vos habitudes quotidiennes démontrent des niveaux sous-optimaux de production de carbone dans votre vie de tous les jours. Pour réduire la production de carbone liée à vos habitudes quotidiennes, veillez à économiser l'eau en prenant des douches plus courtes et en fermant le lavabo lorsque vous vous brossez les dents. Veillez également à recycler et à composter autant que possible et à économiser vos ampoules (fermez les lumières lorsque vous ne les utilisez pas).
 </p>`;
             }
             else if(calculateSectionEmissions("habits") < 2.5){
-            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
-            <p id="sect-p">Your everyday habits demonstrate optimal levels of carbon production in your day to day life. Make sure to continue practicing efficient habits such as water conservation, light bulb conservation and composting and recycling. =)
+            summaryText.innerHTML = `<h3 id="sect-h"> Les habitudes:</h3>
+            <p id="sect-p">Vos habitudes quotidiennes démontrent des niveaux optimaux de production de carbone dans votre vie de tous les jours. Veillez à conserver des habitudes efficaces telles que la conservation de l'eau, la conservation des ampoules électriques, le compostage et le recyclage. =)
 </p>`;
             }
 
