@@ -130,6 +130,35 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
           // Summary
           summaryManager(1);
+
+           graph.innerHTML = `<canvas id="myChart" style="width:100%;max-width:700px"></canvas>`
+
+          var xValues = ["Tes emissions", "Ton prediction", "Emissions des Canadiens"];
+          var yValues = [totalEmissions, numInput.value, 17.7];
+          var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#e8c3b9",
+          "#1e7145"
+];
+
+          new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Tes emissions comparer a les emissions des Canadiens"
+    }
+  }
+});
         }
     });
 
